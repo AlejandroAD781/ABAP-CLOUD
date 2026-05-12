@@ -46,7 +46,7 @@ CLASS zcl_tablas_aad IMPLEMENTATION.
     edad = 7
     id = 8
     telefono = '66666777'
-    correo = 'asfas')
+    correo = 'asfas' )
     into table lt_cliente.
 
 *    out->write( lt_cliente ).

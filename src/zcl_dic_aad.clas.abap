@@ -48,7 +48,7 @@ CLASS zcl_dic_aad IMPLEMENTATION.
       ENDCASE.
 
 *3. Mostramos el resultado
-      out->write( |Resultado:  { lv_numero1 } { lv_operacion }  { lv_numero2 }  = { lv_resultado } | ).
+      out->write( |Resultado:  { lv_numero1 } { lv_operacion } { lv_numero2 }  = { lv_resultado } | ).
      ELSE.
 
 *4. Si el usuario no es "paco", acceso denegado
