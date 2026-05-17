@@ -10,7 +10,9 @@ ENDCLASS.
 
 
 
-CLASS zcl_funprocesamiento_aad IMPLEMENTATION.
+CLASS ZCL_FUNPROCESAMIENTO_AAD IMPLEMENTATION.
+
+
   METHOD if_oo_adt_classrun~main.
 
 *  DATA lv_num TYPE i. "Declara una variable entera llamada lv_num
@@ -108,5 +110,4 @@ data: lv_text type string,
       endif.
 
   ENDMETHOD.
-
 ENDCLASS.

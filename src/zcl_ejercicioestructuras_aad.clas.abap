@@ -10,7 +10,10 @@ CLASS zcl_ejercicioestructuras_aad DEFINITION
 ENDCLASS.
 
 
-CLASS zcl_ejercicioestructuras_aad IMPLEMENTATION.
+
+CLASS ZCL_EJERCICIOESTRUCTURAS_AAD IMPLEMENTATION.
+
+
   METHOD if_oo_adt_classrun~main.
 
  ""
@@ -89,5 +92,4 @@ out->write( '--------EJERCICIO 5--------' ).
     out->write( ls_nested ).
 
   ENDMETHOD.
-
 ENDCLASS.

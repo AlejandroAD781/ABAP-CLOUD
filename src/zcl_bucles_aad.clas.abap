@@ -8,7 +8,11 @@ CLASS zcl_bucles_aad DEFINITION
   PRIVATE SECTION.
 ENDCLASS.
 
-CLASS zcl_bucles_aad IMPLEMENTATION.
+
+
+CLASS ZCL_BUCLES_AAD IMPLEMENTATION.
+
+
   METHOD if_oo_adt_classrun~main.
 
     DATA lv_num TYPE i VALUE 0.
@@ -33,5 +37,4 @@ CLASS zcl_bucles_aad IMPLEMENTATION.
     ENDWHILE.
 
   ENDMETHOD.
-
 ENDCLASS.

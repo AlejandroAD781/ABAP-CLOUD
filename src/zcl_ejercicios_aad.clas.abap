@@ -10,9 +10,10 @@ CLASS zcl_ejercicios_aad DEFINITION
   PRIVATE SECTION.
 ENDCLASS.
 
-CLASS zcl_ejercicios_aad IMPLEMENTATION.
 
-"ejercicio"
+
+CLASS ZCL_EJERCICIOS_AAD IMPLEMENTATION.
+
 
   METHOD if_oo_adt_classrun~main.
 

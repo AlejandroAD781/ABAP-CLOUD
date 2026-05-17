@@ -9,11 +9,11 @@ CLASS zcl_estructura_aad DEFINITION
   PRIVATE SECTION.
 ENDCLASS.
 
-"CREACION DE ESTRUCTURA"
 
 
+CLASS ZCL_ESTRUCTURA_AAD IMPLEMENTATION.
 
-CLASS zcl_estructura_aad IMPLEMENTATION.
+
   METHOD if_oo_adt_classrun~main.
 
 "tipo de estructura"
@@ -123,5 +123,4 @@ DATA: BEGIN OF ls_empleado_info,
 
       out->write( ls_empleado_info ).
       ENDMETHOD.
-
 ENDCLASS.
