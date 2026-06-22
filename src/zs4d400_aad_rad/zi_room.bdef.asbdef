@@ -1,0 +1,51 @@
+managed implementation in class zbp_i_room unique;
+strict ( 2 );
+
+define behavior for ZI_Room //alias <alias_name>
+persistent table zroom_aad
+lock master
+authorization master ( global, instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly, numbering:managed ) roomuuid;
+  association _Equipos { create; }
+  association _Reservations { create; }
+}
+
+define behavior for ZI_equipo //alias <alias_name>
+persistent table zequipo_aad
+lock dependent by _Room
+authorization dependent by _Room
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly, numbering:managed ) equipmentuuid;
+  field ( readonly ) roomuuid;
+  association _Room;
+}
+
+define behavior for zi_reserva //alias <alias_name>
+persistent table zreserva_aad
+lock dependent by _Room
+authorization dependent by _Room
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly, numbering:managed ) reservationuuid;
+  field ( readonly ) roomuuid;
+
+  action CancelReservation;
+
+    determination CalculateDuration
+    on modify { create; field starttime, endtime; }
+
+    validation CheckOverlappingReservations
+    on save { create; update; }
+
+  association _Room;
+}

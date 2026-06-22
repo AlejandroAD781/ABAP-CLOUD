@@ -62,21 +62,21 @@ CLASS zcl_tablas2_aad IMPLEMENTATION.
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" RECORRER LA TABLA Y GUARDARLA EN ESTRUCTURA CON ESE REGISTRO.
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-*SELECT FROM /dmo/flight FIELDS * INTO TABLE @data(lt_flight_standard).
-*LOOP AT lt_flight_standard INTO DATA(ls_vuelo) WHERE connection_id = '0015'.
-*out->write( ls_vuelo ).
-*ENDLOOP.
+SELECT FROM /dmo/flight FIELDS * INTO TABLE @data(lt_flight_standard).
+LOOP AT lt_flight_standard INTO DATA(ls_vuelo) WHERE connection_id = '0015'.
+out->write( ls_vuelo ).
+ENDLOOP.
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" USO DE ALIAS 'AS'
+"" USO DE ALIAS 'AS'. cambiar nombre de columna y coger algunas columnas.
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-SELECT * FROM /dmo/flight WHERE carrier_id = 'LH' into table @data(lt_vuelos).
-
-SELECT carrier_id, connection_id as conexion , flight_date FROM @lt_vuelos as lt INTO TABLE @data(lt_copia).
-
-out->write( lt_vuelos ).
-out->write( lt_copia ).
+*SELECT * FROM /dmo/flight WHERE carrier_id = 'LH' into table @data(lt_vuelos).
+*
+*SELECT carrier_id, connection_id as conexion , flight_date FROM @lt_vuelos as lt INTO TABLE @data(lt_copia).
+*
+*out->write( lt_vuelos ).
+*out->write( lt_copia ).
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "TRATAMIENTO DE SORTED TABLES

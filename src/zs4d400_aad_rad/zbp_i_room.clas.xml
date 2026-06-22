@@ -3,13 +3,15 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <VSEOCLASS>
-    <CLSNAME>ZCL_POO_AAD</CLSNAME>
+    <CLSNAME>ZBP_I_ROOM</CLSNAME>
     <LANGU>E</LANGU>
-    <DESCRIPT>ZCL POO AAD</DESCRIPT>
+    <DESCRIPT>Behavior Implementation for ZI_ROOM</DESCRIPT>
+    <CATEGORY>06</CATEGORY>
     <STATE>1</STATE>
     <CLSCCINCL>X</CLSCCINCL>
     <FIXPT>X</FIXPT>
     <UNICODE>X</UNICODE>
+    <CLSDEFINT>ZI_ROOM</CLSDEFINT>
    </VSEOCLASS>
   </asx:values>
  </asx:abap>

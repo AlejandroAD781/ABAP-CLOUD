@@ -1,0 +1,5 @@
+@EndUserText.label: 'SERVICE DEFINITION'
+define service ZUI_ROOM_SERVICE {
+  expose ZC_Room    as Rooms;
+  expose ZC_Reserva as Reservas;
+}
