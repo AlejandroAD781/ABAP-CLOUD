@@ -1,0 +1,11 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "SAP Object Node Type ZROOM_AAD",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "name": "ZROOM_AAD",
+  "sapObjectType": "ZROOM_AAD",
+  "rootNode": true
+}

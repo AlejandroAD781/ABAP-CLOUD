@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZR_ROOM_AAD'
+@MappingRole: true
+define role ZR_ROOM_AAD {
+  grant select on ZR_ROOM_AAD
+  where TRUE;
+}

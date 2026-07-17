@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZC_CDS_LOGICA2'
+@MappingRole: true
+define role ZC_CDS_LOGICA2 {
+  grant select on ZC_CDS_LOGICA2
+  where INHERITING CONDITIONS FROM ENTITY ZCDS_LOGICA2 REPLACING { ROOT WITH _BaseEntity };
+}

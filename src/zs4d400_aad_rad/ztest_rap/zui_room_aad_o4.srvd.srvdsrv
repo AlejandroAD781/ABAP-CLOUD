@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_ROOM_AAD'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_ROOM_AAD'
+  }
+}
+define service ZUI_ROOM_AAD_O4 provider contracts odata_v4_ui {
+  expose ZC_ROOM_AAD;
+}

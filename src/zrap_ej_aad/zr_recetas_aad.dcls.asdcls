@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZR_RECETAS_AAD'
+@MappingRole: true
+define role ZR_RECETAS_AAD {
+  grant select on ZR_RECETAS_AAD
+  where TRUE;
+}

@@ -4,7 +4,7 @@ strict ( 2 );
 define behavior for ZI_Room //alias <alias_name>
 persistent table zroom_aad
 lock master
-authorization master ( global, instance )
+authorization master ( none )
 //etag master <field_name>
 {
   create;

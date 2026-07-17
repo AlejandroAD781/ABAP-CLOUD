@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZC_ROOM_AAD'
+@MappingRole: true
+define role ZC_ROOM_AAD {
+  grant select on ZC_ROOM_AAD
+  where INHERITING CONDITIONS FROM ENTITY ZR_ROOM_AAD REPLACING { ROOT WITH _BaseEntity };
+}

@@ -1,0 +1,48 @@
+managed implementation in class ZBP_R_ROOM_AAD unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_ROOM_AAD alias ZrRoomAad
+persistent table ZROOM_AAD
+extensible
+draft table ZROOM_AAD_D
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( readonly )
+   Roomuuid,
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt,
+   LocalLastChangedAt;
+
+  field ( numbering : managed )
+   Roomuuid;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZROOM_AAD corresponding extensible
+  {
+    Roomuuid = ROOMUUID;
+    Roomid = ROOMID;
+    Name = NAME;
+    Capacity = CAPACITY;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedBy = LAST_CHANGED_BY;
+    LastChangedAt = LAST_CHANGED_AT;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+  }
+
+}
